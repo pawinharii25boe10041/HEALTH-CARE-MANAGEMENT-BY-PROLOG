@@ -47,7 +47,7 @@ QUERY:?- doctor_schedule(dr_smith, Patient, Date, Time).
 QUERY:?- patient_doctor(john, Doctor).
 
 % 6. List all patients scheduled on a given date
-QUERY: patients_on_date('2025-11-27', Patient, Doctor, Time).
+QUERY:?- patients_on_date('2025-11-27', Patient, Doctor, Time).
 
 % 7. Find appointment details for a specific patient
 QUERY:?- appointment(john, Doctor, Date, Time).
@@ -56,7 +56,7 @@ QUERY:?- appointment(john, Doctor, Date, Time).
 QUERY:?- appointment(Patient, Doctor, '2025-11-26', Time).
 
 % 9. Find all appointments with a specific doctor
-appointment(Patient, dr_jones, Date, Time).
+QUERY:?- appointment(Patient, dr_jones, Date, Time).
 
 % 10. List all doctors treating male patients
 QUERY:?- patient(Name, _, male), appointment(Name, Doctor, _, _).
