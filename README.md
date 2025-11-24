@@ -32,37 +32,37 @@ This project implements a simple expert system for managing healthcare appointme
 
 4. **Sample Queries to Try**  
 % 1. List all doctors and specialties
-QUERY: doctor(Name, Specialty).
+QUERY:?- doctor(Name, Specialty).
 
 % 2. List all patients with age and gender
-QUERY: patient(Name, Age, Gender).
+QUERY:?- patient(Name, Age, Gender).
 
 % 3. Show all appointments (Patient, Doctor, Date, Time)
-QUERY: appointment(Patient, Doctor, Date, Time).
+QUERY:?- appointment(Patient, Doctor, Date, Time).
 
 % 4. Find appointments for a given doctor
-QUERY: doctor_schedule(dr_smith, Patient, Date, Time).
+QUERY:?- doctor_schedule(dr_smith, Patient, Date, Time).
 
 % 5. Find which doctor a patient is seeing
-QUERY: patient_doctor(john, Doctor).
+QUERY:?- patient_doctor(john, Doctor).
 
 % 6. List all patients scheduled on a given date
 QUERY: patients_on_date('2025-11-27', Patient, Doctor, Time).
 
 % 7. Find appointment details for a specific patient
-QUERY: appointment(john, Doctor, Date, Time).
+QUERY:?- appointment(john, Doctor, Date, Time).
 
 % 8. Find all appointments for a specific day
-QUERY: appointment(Patient, Doctor, '2025-11-26', Time).
+QUERY:?- appointment(Patient, Doctor, '2025-11-26', Time).
 
 % 9. Find all appointments with a specific doctor
 appointment(Patient, dr_jones, Date, Time).
 
 % 10. List all doctors treating male patients
-QUERY: patient(Name, _, male), appointment(Name, Doctor, _, _).
+QUERY:?- patient(Name, _, male), appointment(Name, Doctor, _, _).
 
 % 11. List all doctors treating patients aged over 40
-QUERY: patient(Name, Age, _), Age > 40, appointment(Name, Doctor, _, _).
+QUERY:?- patient(Name, Age, _), Age > 40, appointment(Name, Doctor, _, _).
 
 
 5. **View Results**
